@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - United Engineering Associates</title>
+    <link rel="stylesheet" type="text/css" href="Css.css" />
+    <link rel="shortcut icon" href="UEAlogo.png" type="image/x-icon" />
+
+    <style>
+      body{
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 0;
+        padding: 0;
+      }
+      .video {
+        height: 83vh;
+        max-width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        color: white;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      #video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        z-index: -1;
+        object-fit: cover;
+      }
+      /* .heading{
+
+          } */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .story {
+        animation: fadeIn 1.5s ease-in-out;
+        font-size: 3em;
+        color: red;
+      }
+      .begins {
+        animation: fadeIn 1.5s ease-in-out;
+        font-size: 2em;
+      }
+      .story::before{
+  
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 0 auto 10px;
+}
+
+.begins::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #ff0505;
+  margin: 10px auto;
+}
+      .UEA{
+        color: red;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 2.5em;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        /* margin: 70px; */
+        
+        
+      }
+      .about{
+        margin: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .who{
+        margin: 20px;
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: #ff3b3b;
+      }
+      .who p{
+        color: rgb(37, 37, 37);
+        text-align: justify;
+        font-style: italic;
+      }
+      .photos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .photos img{
+        max-width: 100%;
+        height: 70vh;
+      }
+      .ceo{
+        margin-left: 3px;
+        margin-right: 3px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        margin-top: 130px;
+        margin-bottom: 130px;
+        text-align: center;
+        justify-content: center;
+      }
+      .ceo h1{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #ff3b3b;
+        /* font-size: 2.5em; */
+      }
+      .ceo p{
+        font-style: italic;
+        color:rgb(37, 37, 37) ;
+        /* text-align: justify; */
+      }
+     .contact{
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      max-width: 100%;
+      height: 70vh;
+      background-color: #383636;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      /* flex-wrap: wrap; */
+     }
+     .first{display: flex;
+      flex-direction: column;
+      /* flex-wrap: wrap; */
+    }
+     .locs{
+      margin-bottom: 60px;
+
+     }
+     
+     .links{
+      display: flex;
+      flex-direction: column;
+      /* padding-left: 80px; */
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+     }
+     .use{
+        /* padding-top: 100px; */
+        font-size: larger;
+     }
+     .ful{
+      list-style: none;
+      padding: 20px;
+     }
+     .ful a {
+  margin: 5px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  font-style: italic;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #000000;
+  
+}
+
+/* Animation styles */
+.ful a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.ful a:hover::after {
+  transform: scaleX(1);
+}
+     .last{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* margin: 180px; */
+     }
+     .last h2{
+      font-size: 2em;
+     }
+     .navbar{
+      display: flex;
+      justify-content: center;
+     }
+     .navbar a {
+      background-color: #000000;
+      border-radius: 6px;
+      padding: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  font-size: larger;
+  
+}
+
+/* Animation styles */
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+ 
+
+footer {
+  display: flex;
+  
+  justify-content: center;
+  background-color: #000000;
+
+}
+
+footer p {
+font-size: 14px;
+color: white;
+text-decoration: #fffdfd;
+}
+@media (max-width:900px){
+  .about{
+    display:flex ;
+    flex-direction: column;
+    font-size: smaller;
+  }
+  .UEA{
+    font-size: 1.5em;
+  }
+  .photos{
+    display: flex;
+    flex-direction: column;
+  }
+  .photos img{
+        max-width: 100%;
+        height: 40vh;
+      }
+    .ceo{
+      font-size: small;
+    }
+    .ceo p{
+      font-style: normal;
+      /* text-align: justify; */
+
+    }
+    .contact{
+      max-width: 100%;
+      height: 45vh;
+    }
+    .first{
+      display: flex;
+      /* flex-wrap: wrap; */
+      justify-content: start;
+      text-align: center;
+      align-items: center;
+
+    }
+    .links{
+      display: none;
+    }
+    .last{
+      display: none;
+    }
+    
+}
+@media (max-width:550px)
+{
+  .contact{
+    height: 55vh;
+
+  }
+  
+  .first{
+    text-align: justify;
+    align-items: flex-start;
+  }
+  .locs{
+    margin-bottom: 20px;
+  }
+}
+@media (max-width:380px){
+  .contact{
+    font-size: smaller;
+    height: 65vh;
+    }
+}
+    </style>
+  </head>
+  <body>
+    <div class="video">
+      <img id="video" src="aboutus.jpg" alt="" />
+      <h1 class="story">Our Story</h1>
+      <h2 class="begins">From Dreams to Reality</h2>
+    </div>
+    <h1 class="UEA">About United Engineering Associates</h1>
+    <div class="about">
+      <div class="who">
+        <h2>Who We Are</h2>
+        <p>United Engineering Associates is a construction firm that focuses on the entire beauty of the place to be constructed. UEA was founded by Qazi Farooq Ahmed; he's built a team of professionals that can cater to clients' requirements to deliver the most optimal solutions; and have made a portfolio that extends national borders. We are construction innovators, driven by excellence and integrity.</p>
+      </div>
+      <div class="who">
+        <h2>What We Do</h2>
+        <p>United Engineering Associates specializes in creating stunning architectural marvels, meticulously enhancing the beauty of every project. Led by Qazi Farooq Ahmed, our dedicated team delivers optimal solutions, exceeding client expectations. With a diverse portfolio that spans across borders, we redefine excellence in construction.</p>
+      </div>
+      <div class="who">
+        <h2>How We Work</h2>
+        <p>At United Engineering Associates, we seamlessly blend creativity and expertise to bring visions to life. Through careful planning, innovative design, and precise execution, our team, led by Qazi Farooq Ahmed, collaborates closely with clients, ensuring optimal solutions. With an unwavering commitment to excellence, we surpass expectations, delivering remarkable results across diverse projects.</p>
+      </div>
+    </div>
+    <div class="photos">
+      <img src="ceo1.jpg" alt="" class="ceo1">
+      <img src="ceo2.png" alt="" class="ceo2">
+    </div>
+    <div class="ceo">
+      <h1>Meet The Ceo</h1>
+      <p>Meet Qazi Farooq Ahmed, the visionary CEO of United Engineering Associates (UEA), a national powerhouse in the engineering and construction domain. With a comprehensive engineering education from UET and over 26 years of experience, Qazi Farooq Ahmed founded UEA in 2000, driven by a passion for excellence. Under his exceptional leadership, UEA has successfully completed over 500 major projects, setting new industry standards and leaving an indelible mark on skylines worldwide. Qazi Farooq Ahmed's unwavering commitment to innovation, customer satisfaction, and attention to practical elements has positioned UEA as a trusted name, known for delivering exceptional results that exceed expectations. His visionary approach and dedication to fostering a culture of excellence have attracted top talent, forming a dynamic team of professionals who share his vision for transforming the industry. With an unparalleled focus on understanding clients' desires, UEA designs and constructs with the present in mind, creating spaces that harmoniously blend aesthetic beauty with functional practicality. Qazi Farooq Ahmed's leadership continues to inspire his team to achieve greatness, driving UEA's continued growth and success as a leading multinational company. With a relentless pursuit of excellence, Qazi Farooq Ahmed and UEA are shaping a brighter future for the industry, one project at a time.</p>
+    </div>
+    <div class="contact">
+      <div class="first">
+
+        <h2 class="head">United Engineering Associates</h2>
+        <h3 class="loc">Office Location:</h3>
+        <p class="loc"> House No.1, New Officers Colony </p>
+        <p class="locs">Rahim Yar Khan, Pakistan</p>
+        <p class="num">Ph: +92-68-5888773, Fax: +92-68-5888774</p>
+        <p class="num">Mob: 0300-8672057</p>
+        <p class="num">Email: uearyk@gmail.com</p>
+
+
+      </div>
+      <div class="links">
+        <h3 class="use">Useful Links:</h3>
+        <li class="ful"><a href="#" onclick="openAboutUs()">About Us</a></li>
+        <li class="ful"><a href="#" onclick="openServices()">  Services</a></li>
+        <li class="ful"><a href="#" onclick="openContactUs()">       Contact Us</a></li>
+      </div>
+      <div class="last">
+        <h2>Your Next Project</h2>
+        <!-- <p>If Yes then click on the button below and to contact with us</p> -->
+        <li class="navbar"id="new">
+          <a href="#" onclick="openProject()">Your Project</a>
+      </li>
+      </div>
+    </div>
+  <footer>
+    <p>&copy; 2023 United Engineering Associates. All rights reserved.</p>
+  </footer>
+  <script>
+ function openContactUs() {
+    window.open('../ContactUs/UnitedEngineeringAssociates.html', '_blank');
+}
+function openAboutUs(){
+    window.open('../AboutUs/U.E.A.html','_blank');
+}
+function openServices(){
+    window.open('../Services/papa.html','_blank');
+}
+function openProject(){
+    window.open('../project/Construct.html','_blank');
+}
+  </script>
+  </body>
+</html>

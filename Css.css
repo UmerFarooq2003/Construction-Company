@@ -1,0 +1,654 @@
+body, ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.logo {
+  position: absolute;
+  top: 02px;
+  left: 20px;
+  
+}
+.logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  z-index: 1;
+
+}
+#new{
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 1px;
+  
+}
+#new a {
+  color: #000;
+  font-style: italic;
+}
+/* Navbar styles */
+nav {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* border-radius: 4px; */
+  text-align: right;
+}
+
+.navbar {
+  display: inline-block;
+  margin-right: 10px;
+  
+}
+
+.navbar a {
+  margin: 16px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  
+}
+
+/* Animation styles */
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Animation for the navbar items */
+.navbar {
+  animation: slideIn 1s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--animation-order) * 0.15s);
+}
+
+/* Assign animation delay to each navbar item */
+.navbar:nth-child(1) {
+  --animation-order: 1;
+}
+
+.navbar:nth-child(2) {
+  --animation-order: 2;
+}
+
+.navbar:nth-child(3) {
+  --animation-order: 3;
+}
+
+.navbar:nth-child(4) {
+  --animation-order: 4;
+}
+
+.navbarrMenu.show {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.navbar-toggle{
+  display: none;
+}
+
+.contact {
+  display: flex;
+  color: black;
+  margin-top: 200px;
+  background-color: #ff6600;
+}
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+}
+.name{
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  /* top: 40%; */
+  /* left: 50% */
+  /* transform: translate(-50%, -50%); */
+  
+  text-align: center; 
+  justify-content: center;
+  align-items: center;
+  
+}
+.name h1{
+ 
+  
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.name h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.name h1,
+.name h2 {
+  opacity: 0;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.name h1 {
+  animation-delay: 0.5s;
+}
+
+.name h2 {
+  animation-delay: 0.5s;
+}
+.name a {
+  position: relative;
+  color: #000;
+  background: linear-gradient(to right, white,rgb(218, 204, 204),rgb(109, 104, 104));
+  padding: 1%;
+  border-radius: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+.name a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.name a:hover::after {
+  transform: scaleX(0.97);
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+#after-video-section {
+  background-color: white;
+  padding-top: 20px;
+  /* padding-left: 20px; */
+  position: relative;
+  object-fit: cover;
+  /* margin-top: 100vh; */
+}
+
+/* CSS for the content wrapper */
+ .content-wrapper { 
+  padding-left: 20px;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* CSS for the CEO heading */
+.ceo-heading {
+  font-size: 24px;
+  color: #333;
+}
+
+.ceo-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ceo-paragraphs {
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  flex: 0 0 50%; /* Adjust the width as needed */
+}
+
+.ceo-image {
+  flex: 0 0 43%; /* Adjust the width as needed */
+  text-align: center;
+}
+
+.ceo-image img {
+  width: 54%;
+  height: 72%;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.company{
+  padding-left: 20px;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.company-heading{
+  font-size: 24px;
+  color: #333;
+
+}
+.company-image{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 43%; /* Adjust the width as needed */
+  text-align: center;
+  align-items: center;
+  
+}
+.company-image img{
+  width: 55%;
+  height: 80%;
+  /* border: #333; */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+
+.company-info{
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.company-paragraphs{
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  flex: 0 0 50%; /* Adjust the width as needed */}
+
+
+.whatsapp-icon  {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+footer {
+  display: flex;
+  
+  justify-content: center;
+  background-color: #000000;
+}
+
+
+footer p {
+font-size: 14px;
+color: #ffffff;
+text-decoration: #fffdfd;
+}
+.media-section{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 30px;
+  margin: 50px;
+  background-color: rgb(255, 255, 255);
+}
+.media{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+.images{
+  filter: grayscale(100%);
+  /* width: 40px; */
+  text-decoration: none;
+  list-style: none;
+  margin: 7px;
+}
+.images img{
+  width: 200px;
+}
+.contact{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  height: 70vh;
+  background-color: #383636;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+ }
+ .first{display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+ .locs{
+  margin-bottom: 60px;
+
+ }
+ 
+ .links{
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 80px; */
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+ }
+ .use{
+    /* padding-top: 100px; */
+    font-size: larger;
+ }
+ .ful{
+  list-style: none;
+  padding: 20px;
+ }
+ .ful a {
+margin: 5px;
+color: white;
+font-size: 16px;
+text-decoration: none;
+position: relative;
+font-style: italic;
+padding: 5px;
+border-radius: 10px;
+background-color: #000000;
+
+}
+
+/* Animation styles */
+.ful a::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: white;
+transform: scaleX(0);
+transition: transform 0.3s ease-in-out;
+}
+
+.ful a:hover::after {
+transform: scaleX(1);
+}
+ .last{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin: 180px; */
+ }
+ .last h2{
+  font-size: 2em;
+ }
+ .navbar2 {
+  display: flex;
+  justify-content: center;
+ }
+ .navbar2 a {
+  background-color: #000000;
+  border-radius: 6px;
+  padding: 10px;
+margin: 10px;
+color: white;
+font-size: 16px;
+text-decoration: none;
+position: relative;
+font-size: larger;
+}
+
+/* Animation styles */
+.navbar2 a::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: white;
+transform: scaleX(0);
+transition: transform 0.3s ease-in-out;
+}
+
+.navbar2 a:hover::after {
+transform: scaleX(1);
+}
+
+@media (max-width : 1000px){
+  .media-section{
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .images img{
+    width: 140px;
+  }
+  .media{
+    flex-direction: column;
+  }
+  .company-info{
+    display: flex;
+    flex-direction: column;
+  }
+  .ceo-info{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+}
+@media (max-width : 868px) {
+  .logo img {
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    z-index: 1;
+  }
+  .navbarrMenu {
+    display: none;
+  }
+  .navbarrMenu.show{
+    display: block;
+  }
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    align-items: flex-end;
+  }
+  
+  .ceo-info{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+  .ceo-paragraphs{
+    font-size: 0.7rem;
+  }
+  .ceo-heading{
+    font-size: medium;
+  }
+  .ceo-image img {
+    width: 50%;
+    height: 35%;
+    text-align: center;
+
+  }
+  /* .company{} */
+  .company-paragraphs{
+    font-size: 0.7rem;
+  }
+  .company-heading{
+    font-size: medium;
+  }
+  .company-image{
+    font-size: 0.8rem;
+  }
+  .company-image img {
+    width: 40%;
+    height: 25%;
+    text-align: center;
+  }
+  .company-info{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+  .end img{
+    height: 640px;
+    width: 640px;
+  }
+ 
+}
+@media (max-width:640px){
+  .end img{
+    height: 500px;
+    width: 500px;
+  }
+}
+@media (max-width : 505px) {
+  .name h1 a {
+    font-size: 20px;
+  }
+  .name h1{
+    font-size : 28px;
+  }
+  .name h2 {
+    font-size: 23px;
+  }
+  .navbarrMenu.show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* font-size: smaller; */
+  }
+  .navbar a {
+      font-size: smaller;
+  }
+  .ceo-paragraphs{
+    font-size: 0.6rem;
+  }
+  .company-paragraphs{
+    font-size: 0.6rem;
+  }
+  .end img{
+    height: 300px;
+    width: 300px;
+  }
+
+}
+@media (max-width : 350px){
+  .name h1 a{
+      font-size: 18px;
+  }
+}
+@media (max-width:900px){
+    .contact{
+      max-width: 100%;
+      height: 45vh;
+    }
+    .first{
+      display: flex;
+      /* flex-wrap: wrap; */
+      justify-content: start;
+      text-align: center;
+      align-items: center;
+
+    }
+    .links{
+      display: none;
+    }
+    .last{
+      display: none;
+    }
+    
+}
+@media (max-width:550px)
+{
+  .contact{
+    height: 55vh;
+
+  }
+  
+  .first{
+    text-align: justify;
+    align-items: flex-start;
+  }
+  .locs{
+    margin-bottom: 20px;
+  }
+}
+@media (max-width:380px){
+  .contact{
+    font-size: smaller;
+    height: 65vh;
+    }
+}

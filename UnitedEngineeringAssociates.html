@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - United Engineering Associates</title>
+    <link rel="shortcut icon" href="UEA logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="cont.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBNTNMlE_pU3dLHGC7idra9heQQPdFW4Y"></script>
+    <script>
+         function initMap() {
+    // Specify the latitude and longitude of your office location
+    var officeLocation = { lat: 28.421158, lng: 70.315871 };
+
+    // Create a map object and specify the container element and initial zoom level
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: officeLocation,
+      zoom: 15
+    });
+
+    // Add a marker to the map for your office location
+    var marker = new google.maps.Marker({
+      position: officeLocation,
+      map: map,
+      title: 'Your Office'
+    });
+  }
+    </script>
+<link rel="stylesheet" type="text/css" href="Css.css">
+</head>
+<body onload="initMap()">
+    
+    <video class="back"autoplay loop>
+        <source src="pexels-tima-miroshnichenko-5717601 (2160p).mp4" type="video/mp4">
+    </video>
+    <div class="heading">
+
+        <h1 class="contact-heading">Contact Us</h1>
+        <h3 class="contact-subheading">Let's build together</h3>
+    </div>
+          
+          
+    <div class="contact-info">
+        <div class="one">
+
+            <h3 class="contact-label">For queries, contact:</h3>
+            <p class="contact-number">0301-8772288</p>
+        </div>
+        <div class="two">
+
+            <h3 class="contact-label">For direct conversation, contact:</h3>
+            <p class="contact-number">0300-8672057</p>
+        </div>
+        <div class="three">
+
+            <h3 class="contact-label">For job seekers, contact:</h3>
+            <p class="contact-number">0308-3291997</p>
+        </div>
+    </div>
+    <div class="location-info">
+        <h3 class="location-heading">Location</h3>
+        <p class="location-address">House No.1, New Officers Colony, Rahim Yar Khan, Pakistan</p>
+    </div>
+        
+    <div id="map"></div>
+    <div class="contact">
+        <div class="first">
+  
+          <h2 class="head">United Engineering Associates</h2>
+          <h3 class="loc">Office Location:</h3>
+          <p class="loc"> House No.1, New Officers Colony </p>
+          <p class="locs">Rahim Yar Khan, Pakistan</p>
+          <p class="num">Ph: +92-68-5888773, Fax: +92-68-5888774</p>
+          <p class="num">Mob: 0300-8672057</p>
+          <p class="num">Email: uearyk@gmail.com</p>
+  
+  
+        </div>
+        <div class="links">
+          <h3 class="use">Useful Links:</h3>
+          <li class="ful"><a href="#" onclick="openAboutUs()">About Us</a></li>
+          <li class="ful"><a href="#" onclick="openServices()">  Services</a></li>
+          <li class="ful"><a href="#" onclick="openContactUs()">       Contact Us</a></li>
+        </div>
+        <div class="last">
+          <h2>Your Next Project</h2>
+          <!-- <p>If Yes then click on the button below and to contact with us</p> -->
+          <li class="navbar2">
+              <a href="#" onclick="openProject()">Your Project</a>
+            </li>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 United Engineering Associates. All rights reserved.</p>
+    </footer>
+</body>
+</html>
